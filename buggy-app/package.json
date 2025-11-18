@@ -1,0 +1,18 @@
+{
+  "name": "task-manager-buggy",
+  "version": "1.0.0",
+  "description": "Task Manager Application with intentional UI/UX bugs",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8080",
+    "test": "pytest tests/test_ui.py -v"
+  },
+  "keywords": ["task-manager", "ui-testing"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "pytest": "latest",
+    "selenium": "latest",
+    "playwright": "latest"
+  }
+}

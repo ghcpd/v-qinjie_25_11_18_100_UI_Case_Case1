@@ -1,0 +1,18 @@
+{
+  "name": "task-manager-fixed",
+  "version": "1.0.0",
+  "description": "Task Manager Application with all UI/UX bugs fixed",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8080",
+    "test": "pytest tests/test_ui.py -v"
+  },
+  "keywords": ["task-manager", "ui-testing"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "pytest": "latest",
+    "selenium": "latest",
+    "playwright": "latest"
+  }
+}
