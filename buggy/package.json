@@ -1,0 +1,17 @@
+{
+  "name": "buggy-web-app",
+  "version": "1.0.0",
+  "description": "A web application with intentional UI/UX bugs for testing",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8080",
+    "test": "pytest test_ui.py"
+  },
+  "keywords": ["buggy", "ui", "ux", "testing"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
+

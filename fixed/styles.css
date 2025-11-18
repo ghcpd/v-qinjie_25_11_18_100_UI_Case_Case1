@@ -1,0 +1,256 @@
+/* Fixed CSS - All layout issues resolved */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+nav button {
+    padding: 10px 20px;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+nav button:hover {
+    background-color: #777;
+}
+
+/* FIXED: Proper flexbox layout for boxes */
+.content-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.content-box {
+    flex: 1 1 300px;
+    min-width: 250px;
+    max-width: 350px;
+    height: 150px;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border: 2px solid #999;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box1 {
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+.box2 {
+    background-color: rgba(0, 255, 0, 0.2);
+}
+
+.box3 {
+    background-color: rgba(0, 0, 255, 0.2);
+}
+
+/* Markdown section */
+.markdown-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#markdownInput {
+    width: 100%;
+    min-height: 200px;
+    padding: 10px;
+    font-family: monospace;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+#renderBtn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+#renderBtn:hover {
+    background-color: #0056b3;
+}
+
+.markdown-output {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-height: 100px;
+}
+
+/* FIXED: Proper markdown rendering styles */
+.markdown-output h1 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    margin: 0.67em 0;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.3em;
+}
+
+.markdown-output h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin: 0.83em 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.3em;
+}
+
+.markdown-output strong {
+    font-weight: bold;
+    color: #333;
+}
+
+.markdown-output em {
+    font-style: italic;
+}
+
+.markdown-output ul {
+    list-style-type: disc;
+    padding-left: 2em;
+    margin: 1em 0;
+}
+
+.markdown-output li {
+    margin: 0.5em 0;
+}
+
+.markdown-output a {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.markdown-output a:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.markdown-output p {
+    margin: 1em 0;
+    line-height: 1.6;
+}
+
+/* Actions section */
+.actions-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.action-btn {
+    padding: 12px 24px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.action-btn:hover {
+    background-color: #218838;
+    transform: translateY(-1px);
+}
+
+.action-btn:active {
+    transform: translateY(0);
+}
+
+#submitBtn {
+    background-color: #007bff;
+}
+
+#submitBtn:hover {
+    background-color: #0056b3;
+}
+
+#deleteBtn {
+    background-color: #dc3545;
+}
+
+#deleteBtn:hover {
+    background-color: #c82333;
+}
+
+/* FIXED: All buttons are visible and properly positioned */
+#submitBtn,
+#cancelBtn,
+#deleteBtn {
+    display: inline-block;
+    position: static;
+    visibility: visible;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+

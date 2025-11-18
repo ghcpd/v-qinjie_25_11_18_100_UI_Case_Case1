@@ -1,0 +1,17 @@
+{
+  "name": "fixed-web-app",
+  "version": "1.0.0",
+  "description": "Fixed web application with all UI/UX bugs resolved",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8080",
+    "test": "pytest test_ui.py"
+  },
+  "keywords": ["fixed", "ui", "ux", "testing"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
+

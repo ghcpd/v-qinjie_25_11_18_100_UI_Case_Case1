@@ -1,0 +1,209 @@
+/* Buggy CSS with intentional layout issues */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+nav button {
+    padding: 10px 20px;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* INTENTIONAL BUG: Overlapping boxes - absolute positioning without proper container */
+.content-section {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.overlapping-box {
+    width: 300px;
+    height: 150px;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border: 2px solid #999;
+    margin: 10px;
+    /* BUG: Absolute positioning causes overlaps */
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.box1 {
+    background-color: rgba(255, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.box2 {
+    background-color: rgba(0, 255, 0, 0.3);
+    /* BUG: Same position causes overlap */
+    top: 50px;
+    left: 50px;
+    z-index: 2;
+}
+
+.box3 {
+    background-color: rgba(0, 0, 255, 0.3);
+    /* BUG: Overlapping with previous boxes */
+    top: 100px;
+    left: 100px;
+    z-index: 3;
+}
+
+/* Markdown section */
+.markdown-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#markdownInput {
+    width: 100%;
+    min-height: 200px;
+    padding: 10px;
+    font-family: monospace;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+#renderBtn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /* BUG: Button might not be visible due to z-index issues */
+    z-index: -1;
+}
+
+.markdown-output {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-height: 100px;
+    /* BUG: Incorrect markdown rendering styles */
+    white-space: pre-wrap;
+    font-family: monospace;
+}
+
+/* BUG: Markdown styles are incorrect - headings won't render properly */
+.markdown-output h1 {
+    font-size: 16px;
+    font-weight: normal;
+    color: #666;
+}
+
+.markdown-output h2 {
+    font-size: 14px;
+    font-weight: normal;
+    color: #666;
+}
+
+.markdown-output strong {
+    font-weight: normal;
+    /* BUG: Bold text won't appear bold */
+}
+
+.markdown-output em {
+    font-style: normal;
+    /* BUG: Italic text won't appear italic */
+}
+
+.markdown-output ul {
+    list-style: none;
+    /* BUG: No bullet points */
+    padding-left: 0;
+}
+
+.markdown-output a {
+    color: #333;
+    text-decoration: none;
+    /* BUG: Links won't be distinguishable */
+}
+
+/* Actions section */
+.actions-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    /* BUG: Flexbox might cause layout issues */
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.action-btn {
+    padding: 12px 24px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* BUG: Submit button is hidden */
+#submitBtn {
+    display: none;
+}
+
+/* BUG: Delete button has wrong positioning */
+#deleteBtn {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+
