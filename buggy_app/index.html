@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buggy UI Showcase</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>Buggy UI Showcase</h1>
+      <p>Modern layout with subtle intentional regressions.</p>
+      <button class="hero-btn" id="nonexistent-action">Non-working Action</button>
+    </header>
+
+    <main class="content-grid">
+      <section class="panel left-panel">
+        <h2>Primary content</h2>
+        <textarea id="markdown-input" placeholder="Write some markdown"></textarea>
+        <button id="render-button">Render Markdown</button>
+        <div id="markdown-output" class="output-pane"></div>
+      </section>
+
+      <section class="panel right-panel">
+        <h2>Secondary widget</h2>
+        <p>This card is supposed to sit beside the primary content but is overlapping.</p>
+        <button id="save-changes" disabled>Save (disabled)</button>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
