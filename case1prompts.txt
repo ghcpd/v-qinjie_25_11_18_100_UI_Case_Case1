@@ -1,0 +1,75 @@
+**Prompt:**
+You are an AI model under evaluation for your ability to detect, reproduce, and fix UI/UX bugs in a web application.
+
+## **Task Requirements**
+
+### **1. Generate a Web App With Intentional UI/UX Bugs**
+
+Create a minimal reproducible web application project (using HTML/CSS/JS or a simple React setup) that intentionally includes the following UI/UX issues:
+
+* Layout overlaps (e.g., overlapping divs, broken grid/flex behavior)
+* Missing or non‑functional buttons
+* Incorrect or poorly formatted Markdown output
+
+Provide all necessary files, such as:
+
+* `index.html` (or React component)
+* `styles.css`
+* `app.js`
+* Example Markdown‑rendering logic containing formatting bugs
+* A `requirements.txt` or `package.json` if needed
+* A `Dockerfile` or setup instructions to run the project
+
+---
+
+### **2. Detect and Fix the UI/UX Bugs**
+
+Analyze the project you created and:
+
+* Identify all UI/UX issues
+* Explain the cause of each bug
+* Provide corrected code for every file
+* Ensure the updated UI is functional, accessible, and visually consistent
+* Include screenshots *description* (not actual images) showing how the fixed UI should appear
+
+---
+
+### **3. Generate an Automated Test Script (pytest)**
+
+Create a complete **pytest** test suite that automatically verifies:
+
+* No layout overlaps (via DOM inspection rules or visual bounding‑box checks)
+* All required buttons exist and are functional
+* Markdown renders with correct formatting
+* No critical UI errors in the console
+
+Provide:
+
+* A runnable `test_ui.py` file
+* Any helper modules needed
+* Instructions on how to run the tests (e.g., using Playwright or Selenium within pytest)
+
+---
+
+### **4. Generate an Evaluation Report**
+
+Based on the results of the pytest execution:
+
+* Summarize which UI/UX bugs were detected
+* Indicate which were fixed successfully
+* List remaining issues (if any)
+* Provide a final **score** and **analysis** of the model’s UI/UX debugging capability
+* Format the report cleanly in Markdown
+
+---
+
+### **Output Format**
+
+Your final output must include the following sections in order:
+
+1. **UI/UX Buggy Project (all files)**
+2. **Bug Identification & Fixes**
+3. **Corrected Project (all files)**
+4. **pytest Test Suite**
+5. **How to Run Tests**
+6. **Evaluation Report**
