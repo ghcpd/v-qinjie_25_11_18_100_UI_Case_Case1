@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fixed UI Showcase</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div>
+        <h1>Fixed UI Showcase</h1>
+        <p>Responsive layout with complete actions.</p>
+      </div>
+      <button class="hero-btn" id="hero-action" type="button">Open Guidance</button>
+    </header>
+
+    <main class="content-grid">
+      <section class="panel left-panel">
+        <h2>Markdown editor</h2>
+        <textarea
+          id="markdown-input"
+          aria-label="Markdown source"
+          placeholder="Try typing # Heading or **bold text**"
+        ></textarea>
+        <button id="render-markdown" type="button">Render Markdown</button>
+        <div id="markdown-output" class="output-pane" aria-live="polite"></div>
+      </section>
+
+      <section class="panel right-panel">
+        <h2>Actions</h2>
+        <p>The panel sits beside the editor without overlapping.</p>
+        <button id="save-changes" type="button">Save</button>
+      </section>
+    </main>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
