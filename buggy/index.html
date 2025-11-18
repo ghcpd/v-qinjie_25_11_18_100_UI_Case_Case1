@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buggy Web App - UI/UX Issues</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Buggy Web Application</h1>
+            <nav>
+                <button id="homeBtn">Home</button>
+                <button id="aboutBtn">About</button>
+                <button id="contactBtn">Contact</button>
+            </nav>
+        </header>
+
+        <main>
+            <section class="content-section">
+                <h2>Welcome Section</h2>
+                <div class="overlapping-box box1">This box overlaps with others</div>
+                <div class="overlapping-box box2">Another overlapping box</div>
+                <div class="overlapping-box box3">Third overlapping element</div>
+            </section>
+
+            <section class="markdown-section">
+                <h2>Markdown Renderer</h2>
+                <textarea id="markdownInput" placeholder="Enter Markdown here..."># Heading 1
+## Heading 2
+**Bold text** and *italic text*
+- List item 1
+- List item 2
+- List item 3
+
+[Link](https://example.com)</textarea>
+                <button id="renderBtn">Render Markdown</button>
+                <div id="markdownOutput" class="markdown-output"></div>
+            </section>
+
+            <section class="actions-section">
+                <h2>Action Buttons</h2>
+                <div class="button-group">
+                    <button class="action-btn" id="submitBtn">Submit</button>
+                    <button class="action-btn" id="cancelBtn">Cancel</button>
+                    <button class="action-btn" id="deleteBtn">Delete</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Buggy App</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
